@@ -7,15 +7,15 @@ public class ceaser {
 
     public void ceasar(){
 
-    };
+    }
     public void verschluesseln (){
-       for(int i = 0;i < kt.length()-1;i++){
+       for(int i = 0;i < kt.length();i++){
            int h = this.getASCII(kt.charAt(i));
-        gt = gt + this.getChar(h + S);
+            gt = gt + this.getChar(h + S);
        }
-    };
+    }
     public void entschluesseln (){
-        for (int i = 0; i <gt.length()-1 ; i++); {
+        for (int i = 0; i <gt.length() ; i++){
             int h = this.getASCII(gt.charAt(i));
             kt = kt + this.getChar(h - S);
         }
@@ -24,13 +24,16 @@ public class ceaser {
     public int getASCII (char pWert)
     {
         return(int)pWert;
-    };
+    }
 
-    public void setKT (String pWert){}
+    public void setKt(String pWert) {
+        this.kt = pWert;
+    }
+
     public String getkt ()
     {
         return kt;
-    };
+    }
     public void setS (int pWert){}
     private char getChar(int pWert)
     {
@@ -39,5 +42,8 @@ public class ceaser {
     private int getS(char pWert)
     {
         return (int)pWert;
+    }
+    public String getGt(){
+        return gt;
     }
 }

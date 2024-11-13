@@ -1,7 +1,10 @@
+import java.util.Scanner;
+
 public class Verwaltung {
     private Scanner scanner ;
-    private Ceaser ceaser;
-    public static void main(string[] args){new Verwaltung();}
+    private ceaser ceaser;
+
+    public static void main(String[] args){new Verwaltung();}
 
     public Verwaltung() {
         scanner = new Scanner(System.in);
@@ -18,15 +21,15 @@ public class Verwaltung {
                 String zeichenkette = scanner.nextLine();
                 System.out.println("Gib den schlüssel an");
                 String schluesselString = scanner.nextLine();
-                int schluessel = integer.parseInt(schluesselString);
-                ceaser = new Ceaser();
+                int schluessel = Integer.parseInt(schluesselString);
+                ceaser = new ceaser();
                 this.ceaser.setKt(zeichenkette);
                 this.ceaser.setS(schluessel);
                 System.out.println("=======Klartext=======");
                 System.out.println(this.ceaser.getkt());
                 this.ceaser.verschluesseln();
                 System.out.println("=========Geheimtext=========");
-                System.out.println(this.ceaser.getgt());
+                System.out.println(this.ceaser.getGt());
 
 
             } else if (option == 2) {
