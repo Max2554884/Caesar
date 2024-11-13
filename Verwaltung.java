@@ -12,27 +12,31 @@ public class Verwaltung {
             System.out.println("[2] Ceaser entschluesseln");
 
             int option = scanner.nextInt();
-            scanner.nextLine(); // nextInt scannt keine neue Zeile. Ohne diese Anweisung würde das nächste gewollte nextLine nicht funktionieren.
+            scanner.nextLine();
             if (option == 1) {
                 System.out.println("Gib das zu verschlüsselnde Wort:");
                 String zeichenkette = scanner.nextLine();
                 System.out.println("Gib den schlüssel an");
-                String schluesselstring = scanner.nextLine();
-                int schluessel = integer.parseInt(schluesselstring ceaser = new ceaser);
+                String schluesselString = scanner.nextLine();
+                int schluessel = integer.parseInt(schluesselString);
+                ceaser = new Ceaser();
                 this.ceaser.setKt(zeichenkette);
                 this.ceaser.setS(schluessel);
+                System.out.println("=======Klartext=======");
+                System.out.println(this.ceaser.getkt());
+                this.ceaser.verschluesseln();
+                System.out.println("=========Geheimtext=========");
+                System.out.println(this.ceaser.getgt());
+
 
             } else if (option == 2) {
-                // this.sendMessage();
-                System.out.println("Gib die Zeichenkette für den Palindromtest an:");
-                String zeichenkette = scanner.nextLine();
-                this.test.setEingabe(zeichenkette);
-                this.test.palindromTest();
-                System.out.println("Ist dein Wort ein Palindrom? Die Antwort lautet: "+this.test.isIstPalindrom());
+
+                this.ceaser.entschluesseln();
+                System.out.println(this.ceaser.getkt());
             }
-            else if (option == 0) {
-                break;
-            }
+            //else if (option == 0) {
+               // break;
+
             System.out.println();
         }
     }
