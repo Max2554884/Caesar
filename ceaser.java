@@ -4,10 +4,14 @@ public class ceaser {
     private int S;
     private String gt;
 
-
-    public void ceasar(){
-
+    //Der Konstruktor hat keinen Rückgabetyp!!!!!
+    public ceaser(){
+        //Wenn die Attribute initalisiert werden behbet man den null Wert anzeige
+        kt ="";
+        gt="";
+        S=0;
     }
+
     public void verschluesseln (){
        for(int i = 0;i < kt.length();i++){
            int h = this.getASCII(kt.charAt(i));
@@ -19,7 +23,6 @@ public class ceaser {
             int h = this.getASCII(gt.charAt(i));
             kt = kt + this.getChar(h - S);
         }
-
     }
     public int getASCII (char pWert)
     {
@@ -34,16 +37,19 @@ public class ceaser {
     {
         return kt;
     }
-    public void setS (int pWert){}
+
+    //Wert muss auch gesetzt werden!
+    public void setS (int pWert){S=pWert;}
     private char getChar(int pWert)
     {
         return (char)pWert;
     }
-    private int getS(char pWert)
+    //Wenn die Methode für andere Objekte aufrufbar sein soll, muss der die Sichtbarkeit public sein!
+    public int getS(char pWert)
     {
         return (int)pWert;
     }
-    public String getGt(){
+    public String getgt(){
         return gt;
     }
 }

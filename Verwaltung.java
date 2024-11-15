@@ -23,13 +23,14 @@ public class Verwaltung {
                 String schluesselString = scanner.nextLine();
                 int schluessel = Integer.parseInt(schluesselString);
                 ceaser = new ceaser();
+                //Methode falsch benannt
                 this.ceaser.setKt(zeichenkette);
                 this.ceaser.setS(schluessel);
                 System.out.println("=======Klartext=======");
                 System.out.println(this.ceaser.getkt());
                 this.ceaser.verschluesseln();
                 System.out.println("=========Geheimtext=========");
-                System.out.println(this.ceaser.getGt());
+                System.out.println(this.ceaser.getgt());
 
 
             } else if (option == 2) {
@@ -37,9 +38,9 @@ public class Verwaltung {
                 this.ceaser.entschluesseln();
                 System.out.println(this.ceaser.getkt());
             }
-            //else if (option == 0) {
-               // break;
-
+            else if (option == 0) {
+                break;
+            }
             System.out.println();
         }
     }
