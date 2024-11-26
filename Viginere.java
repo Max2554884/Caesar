@@ -23,11 +23,9 @@ public class Viginere {
 
     public void entschluesseln() {
         for (int i = 0; i < gt.length(); i++) {
-            char buchstabe = gt.charAt(i);
-            char schluessel = S.charAt(i % S.length());
-            int verschiebung = BuchstabenZuZahlen(schluessel) - 'A';
-            char entschluesselt = getChar((BuchstabenZuZahlen(buchstabe) - verschiebung + 26) % 26 + 'A');
-            kt += entschluesselt;
+            int n = this.BuchstabenZuZahlen(gt.charAt(i));
+            int m = this.BuchstabenZuZahlen(S.charAt(i));
+            kt = kt + this.zahlenZuBuchstaben(n - m);
         }
     }
 
@@ -35,7 +33,7 @@ public class Viginere {
         return (char) pWert;
     }
 
-    private int  BuchstabenZuZahlen(){
+    private int  BuchstabenZuZahlen(char pWert){
           return (int) pWert;
 
     }
@@ -54,20 +52,15 @@ public class Viginere {
     public void setGt(String pgt){
 
     }
-
-    private char getChar(int pWert) {
-        return (char) pWert;
-    }
-
     //Wenn die Methode für andere Objekte aufrufbar sein soll, muss der die Sichtbarkeit public sein!
     public void setS(String pSchluessel) {
+        S = pSchluessel;
     }
+
     public String getS(){
         return S;
     }
 
-    public String getgt() {
-        return gt;
-    }
+
     }
 
