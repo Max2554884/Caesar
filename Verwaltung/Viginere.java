@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Verwaltung {
     private Scanner scanner ;
-    private Veginere ceaser;
+    private Viginere Viginere;
 
     public static void main(String[] args){new Verwaltung();}
 
@@ -38,7 +38,7 @@ public class Verwaltung {
 
             } else if (option == 2) {
 
-                this.ceaser.entschluesseln();
+                this.ceaser.entschluesseln();//
                 System.out.println(this.ceaser.getkt());
             }
             else if (option == 0) {
