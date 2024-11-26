@@ -19,6 +19,7 @@ public class Verwaltung {
             System.out.println("[0] Beenden");
             int option = scanner.nextInt();
             scanner.nextLine();
+            
             if (option == 1) {
                 System.out.println("Gib die Zeichenkette an, die verschuesseln werden soll:");
                 String zeichenkette = scanner.nextLine();
