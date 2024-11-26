@@ -50,6 +50,7 @@ public class Viginere {
 
     //Wert muss auch gesetzt werden!
     public void setGt(String pgt){
+        this.gt = pgt;
 
     }
     //Wenn die Methode für andere Objekte aufrufbar sein soll, muss der die Sichtbarkeit public sein!
@@ -60,7 +61,9 @@ public class Viginere {
     public String getS(){
         return S;
     }
-
+    public String getkt(){
+        return kt;
+    }
 
     }
 

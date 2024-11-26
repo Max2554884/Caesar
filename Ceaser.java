@@ -1,11 +1,11 @@
-public class ceaser {
+public class Ceaser {
 
     private String kt;
     private int S;
     private String gt;
 
     //Der Konstruktor hat keinen Rückgabetyp!!!!!
-    public ceaser(){
+    public Ceaser(){
         //Wenn die Attribute initalisiert werden behbet man den null Wert anzeige
         kt ="";
         gt="";

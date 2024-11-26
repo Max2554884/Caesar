@@ -1,10 +1,9 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Verwaltung {
     private Scanner scanner ;
     private Viginere viginere;
-    private ceaser ceaser;
+    private Ceaser ceaser;
 
     public static void main(String[] args){new Verwaltung();}
 
@@ -26,14 +25,15 @@ public class Verwaltung {
                 System.out.println("Gib den Schlüsseln an:");
                 String schluesselString = scanner.nextLine();
                 int schluessel = Integer.parseInt(schluesselString);
-                ceasar = new ceasar();
-                this.ceasar.setKt(zeichenkette);
-                this.ceasar.setS(schluessel);
+                ceaser = new Ceaser();
+
+                this.ceaser.setKt(zeichenkette);
+                this.ceaser.setS(schluessel);
                 System.out.println("========Klartext=====");
-                System.out.println(this.ceasar.getKt());
-                this.ceasar.verschuesseln();
+                System.out.println(this.ceaser.getkt());
+                this.ceaser.verschluesseln();
                 System.out.println("========Geheimtext=====");
-                System.out.println(this.scanner.ceasar.getgt());
+                System.out.println(this.ceaser.getgt());
 
 
 
@@ -44,14 +44,14 @@ public class Verwaltung {
                 System.out.println("Gib den Schlüsseln an:");
                 String schluesselString = scanner.nextLine();
                 int S = Integer.parseInt(schluesselString);
-                ceasar = new ceasar();
-                this.ceasar.setgt(zeichenkette);
-                this.ceasar.setS(S);
+                ceaser = new Ceaser();
+                this.ceaser.setGt(zeichenkette);
+                this.ceaser.setS(S);
                 System.out.println("========Geheimtext=====");
                 System.out.println(zeichenkette);
-                this.ceaesar.entschuesseln();
+                this.ceaser.entschluesseln();
                 System.out.println("========Klartext=====");
-                System.out.println(this.ceasar.getKt());
+                System.out.println(this.ceaser.getkt());
             }
             else if (option == 0) {
                 break;
@@ -61,14 +61,14 @@ public class Verwaltung {
                 String zeichenkette = scanner.nextLine();
                 System.out.println("Gib das Codewort an:");
                 String schluesselString = scanner.nextLine();
-                Viginere = new Viginere();
-                this.Viginere.setkt(zeichenkette);
-                this.Viginere.setS(schluesselString);
+                viginere = new Viginere();
+                this.viginere.setKt(zeichenkette);
+                this.viginere.setS(schluesselString);
                 System.out.println("========Klartext=====");
                 System.out.println(zeichenkette);
-                this.Viginere.verschlusseln();
+                this.viginere.verschluesseln();
                 System.out.println("========Geheimtext=====");
-                System.out.println(this.Viginere.getgt());
+                System.out.println(this.viginere.getGt());
 
             } else if (option == 4) {
 
@@ -77,14 +77,14 @@ public class Verwaltung {
                 System.out.println("Gib das Codewort an:");
                 String schluesselString = scanner.nextLine();
                 String schluessel = (schluesselString);
-                Viginere = new Viginere();
-                this.Viginere.setgt(zeichenkette);
-                this.Viginere.setschluessel(schluessel);
+                viginere = new Viginere();
+                this.viginere.setGt(zeichenkette);
+                this.viginere.setS(schluessel);
                 System.out.println("========Geheimtext=====");
                 System.out.println(zeichenkette);
-                this.Viginere.entschlusseln();
+                this.viginere.entschluesseln();
                 System.out.println("========Klartext=====");
-                System.out.println(this.Viginere.getkt());
+                System.out.println(this.viginere.getkt());
 
 
             }
