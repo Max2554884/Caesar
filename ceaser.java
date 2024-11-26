@@ -13,7 +13,7 @@ public class ceaser {
     }
 
     public void verschluesseln (){
-       for(int i = 0;i < kt.length();i++){
+        for(int i = 0;i < kt.length();i++){
            int h = this.getASCII(kt.charAt(i));
             gt = gt + this.getChar(h + S);
        }
@@ -52,4 +52,6 @@ public class ceaser {
     public String getgt(){
         return gt;
     }
+    public void setGt(String pWert){
+        this.gt=pWert;}
 }

@@ -13,7 +13,7 @@ public class Verwaltung {
             System.out.println("== HAUPTMENÜ ==");
             System.out.println("[1] Ceaser Verschluesseln");
             System.out.println("[2] Ceaser entschluesseln");
-
+            System.out.println("[0]Beenden");
             int option = scanner.nextInt();
             scanner.nextLine();
             if (option == 1) {
@@ -34,7 +34,13 @@ public class Verwaltung {
 
 
             } else if (option == 2) {
-
+                ceaser.setKt("");
+                System.out.println("Welches Wort soll entschlüsselt werden?");
+                String zeichenkette = scanner.nextLine();
+                this.ceaser.setGt(zeichenkette);
+                System.out.println("Gib den schlüssel an");
+                String schluesselString = scanner.nextLine();
+                int schluessel = Integer.parseInt(schluesselString);
                 this.ceaser.entschluesseln();
                 System.out.println(this.ceaser.getkt());
             }
