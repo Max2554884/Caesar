@@ -16,8 +16,8 @@ public class Viginere {
     public void verschluesseln() {
         for (int i = 0; i < kt.length(); i++) {
            int h = this.zahlenZuBuchstaben(kt.charAt(i));
-            int j = this.BuchstabenZuZahlen(S.charAt(i%S.length()));
-            gt = gt + this.BuchstabenZuZahlen(h + S);
+            int j = this.BuchstabenZuZahlen(S.charAt(i));
+            gt = gt +this.zahlenZuBuchstaben((char) (h+j));
         }
     }
 
@@ -60,17 +60,14 @@ public class Viginere {
     }
 
     //Wenn die Methode für andere Objekte aufrufbar sein soll, muss der die Sichtbarkeit public sein!
-    public void setS(String pWert) {
-        S = pWert;
+    public void setS(String pSchluessel) {
     }
-    public String getS(char pWert) {
-        return (char) pWert;
+    public String getS(){
+        return S;
     }
 
     public String getgt() {
         return gt;
     }
-
-
     }
-}
+
