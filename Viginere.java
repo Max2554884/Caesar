@@ -23,7 +23,7 @@ public class Viginere extends Kryptomat{
     public void entschluesseln() {
         for (int i = 0; i < gt.length(); i++) {
             int n = this.getAscii(gt.charAt(i));
-            int m = this.getAscii(S.charAt(i));
+            int m = this.getAscii(S.charAt(i))-65;
             kt = kt + this.getChar(n - m);
         }
     }
