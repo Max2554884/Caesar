@@ -31,10 +31,10 @@ public class Verwaltung {
                 this.ceaser.setKt(zeichenkette);
                 this.ceaser.setS(schluessel);
                 System.out.println("========Klartext=====");
-                System.out.println(this.ceaser.getkt());
+                System.out.println(this.ceaser.getKt());
                 this.ceaser.verschluesseln();
                 System.out.println("========Geheimtext=====");
-                System.out.println(this.ceaser.getgt());
+                System.out.println(this.ceaser.getGt());
 
 
 
@@ -52,7 +52,7 @@ public class Verwaltung {
                 System.out.println(zeichenkette);
                 this.ceaser.entschluesseln();
                 System.out.println("========Klartext=====");
-                System.out.println(this.ceaser.getkt());
+                System.out.println(this.ceaser.getKt());
             }
             else if (option == 0) {
                 break;
@@ -85,7 +85,7 @@ public class Verwaltung {
                 System.out.println(zeichenkette);
                 this.viginere.entschluesseln();
                 System.out.println("========Klartext=====");
-                System.out.println(this.viginere.getkt());
+                System.out.println(this.viginere.getKt());
 
 
             }
