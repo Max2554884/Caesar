@@ -5,40 +5,43 @@ public abstract class  Kryptomat {
     private String kt;
 
 
-
     //Konstruktor
-    public Kryptomat(){
+    public Kryptomat() {
 
     }
+
     //verschlüsselt den Kt
-    public void  verschlusseln(){
+    public abstract void verschlusseln();
 
-    }
     //entschlüsselt den Gt
-    public void entschluesseln(){
+    public abstract void entschluesseln();
 
-    }
     // Wandelt Zahlen in Buchstaben um
-    private char getChar(int pWert){
+    private char getChar(int pWert) {
 
         return (char) pWert;
     }
+
     //Wandelt Buchstaben in Zahlen um
-    private int getAscii(char pWert){
+    private int getAscii(char pWert) {
         return (int) pWert;
     }
-    public String getgt(){
+
+    public String getgt() {
         return gt;
     }
-    public void  setgt(String pGt){
+
+    public void setgt(String pGt) {
         gt = pGt;
     }
-    public String getKt(){
+
+    public String getKt() {
         return kt;
     }
+
     public void setKt(String pKt) {
         kt = pKt;
     }
 
-
+}
 
