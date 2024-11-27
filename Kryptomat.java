@@ -1,7 +1,7 @@
 public abstract class  Kryptomat {
 
     //Attribute der Abstrakten- Klasse
-    private String gt;
+    protected String gt;
     private String kt;
 
 
