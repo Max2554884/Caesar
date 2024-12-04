@@ -4,6 +4,7 @@ public class Verwaltung {
     private Scanner scanner ;
     private Viginere viginere;
     private Ceaser ceaser;
+    private Polybius polybius;
 
     public static void main(String[] args){new Verwaltung();}
 
@@ -79,10 +80,9 @@ public class Verwaltung {
                 String zeichenkette = scanner.nextLine();
                 System.out.println("Gib das Codewort an:");
                 String schluesselString = scanner.nextLine();
-                String schluessel = (schluesselString);
                 viginere = new Viginere();
                 this.viginere.setGt(zeichenkette);
-                this.viginere.setS(schluessel);
+                this.viginere.setS(schluesselString);
                 System.out.println("========Geheimtext=====");
                 System.out.println(zeichenkette);
                 this.viginere.entschluesseln();
@@ -93,6 +93,13 @@ public class Verwaltung {
             }
              else if (option== 5){
                 System.out.println("Gib die zeichenkette an,die verschuesselt werden soll");
+                String zeichenkette = scanner.nextLine();
+                polybius = new Polybius();
+                this.polybius.setKt(zeichenkette);
+                this.polybius.verschluesseln();
+                System.out.println("========Geheimtext========");
+
+                System.out.println(this.polybius.getGt());
             }
              else if (option== 6){
                 System.out.println("Gib die zeichenkette an,die entschluesselt  werden soll");
