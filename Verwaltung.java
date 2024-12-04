@@ -16,6 +16,8 @@ public class Verwaltung {
             System.out.println("[2] Ceaser entschluesseln");
             System.out.println("[3] Viginere Verschuesseln");
             System.out.println("[4] Viginere Entschuesseln");
+            System.out.println("[5] Polybius Verschluesseln");
+            System.out.println("[6] Polybius Entschuesseln");
             System.out.println("[0] Beenden");
             int option = scanner.nextInt();
             scanner.nextLine();
@@ -89,7 +91,13 @@ public class Verwaltung {
 
 
             }
+             else if (option== 5){
+                System.out.println("Gib die zeichenkette an,die verschuesselt werden soll");
+            }
+             else if (option== 6){
+                System.out.println("Gib die zeichenkette an,die entschluesselt  werden soll");
 
+             }
         }
     }
 }
