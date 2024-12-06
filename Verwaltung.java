@@ -20,6 +20,7 @@ public class Verwaltung {
             System.out.println("[5] Polybius Verschluesseln");
             System.out.println("[6] Polybius Entschuesseln");
             System.out.println("[0] Beenden");
+
             int option = scanner.nextInt();
             scanner.nextLine();
             
