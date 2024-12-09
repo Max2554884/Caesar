@@ -12,7 +12,7 @@ public class Polybius extends Kryptomat {
         for (int i = 0; i <kt.length() ; i++) {//ghet durch Klartext durch
             for (int j = 1; j < alphabetQuadrat.length ; j++) {// zeile
                 for (int h = 1; h < alphabetQuadrat.length; h++) {//spalte
-                    if (kt.charAt(i) ==alphabetQuadrat[j][h]) {
+                    if (kt.charAt(i) ==alphabetQuadrat[j][h]) {//guckt ob bustabe an i kt entspricht enn jas j u h speichern
                         gt=gt+j+h;     //addet zeile und spalte zum Wert des gt
 
                 }
@@ -28,8 +28,8 @@ public class Polybius extends Kryptomat {
         for (int i = 0; i <gt.length() ; i++) {
             for (int j = 1; j <alphabetQuadrat.length; j++) {
                 for (int k = 0; k < alphabetQuadrat.length ; k++) {
-                    if (gt.charAt() == null) {
-                        
+                    if (gt.charAt(i) == alphabetQuadrat[j][k]) {
+                      kt=kt+j+k;
                     }
                 }  
             }  
